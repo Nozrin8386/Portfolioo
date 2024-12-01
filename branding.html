@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="icon" href="img_source/Untitled-1-01.png">
+</head>
+<body>
+    <!-- Header Section -->
+<header class="header">
+    <div class="container header-content">
+    <div class="row align-items-center justify-content-between">
+      <!-- Logo -->
+      <div class ="col-md-3 col-lg-2">
+         <div href="index.html" class="logo">Rothelowman</div>
+      </div>
+      <!-- Navigation Links -->
+      <div class ="col-md-6 col-lg-8 d-flex justify-content-center">
+       <nav class="navbar d-flex align-items-center gap-4">
+         <a href="index.html#about" class="text-decoration-none">About</a>
+         <div class="Project">
+           <a href="index.html#project" class="Projectbtn d-flex align-items-center">Project 
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </a>
+          <!-- Dropdown -->
+          <div class="Project-content position-absolute ">
+            <a href="branding.html" class="dropdown-item">Branding</a>
+            <a href="commercial.html" class="dropdown-item">Commercial</a>
+            <a href="illustration.html" class="dropdown-item">Illustration</a>
+          </div>
+         </div>
+         <a href="index.html#feedback"  class="text-decoration-none">Review</a>
+        </nav>
+       </div>
+       <!-- Contact Button -->
+       <div class ="col-md-2 col-lg-2">
+        <a  href="https://calendar.app.google/bhjgtmqwfb8A911H8" 
+        target="_blank" class="contactbtn contactbtn-md btn">Let's talk</a> 
+       </nav>
+       </div>
+    </div>
+  </div>
+    <!-- Mobile Menu (Dropdown) -->
+    <div class="dropdown">
+        <div class="logo">Rothelowman</div>
+        <div class="myDropdown">
+        <div class="dropbtn"> 
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 20h16" />
+          <path d="M4 12h16" />
+          <path d="M4 4h16" />
+        </svg>
+      </div>
+        <div class="dropdown-content">
+          <a href="index.html#about">About</a>
+          <a href="index.html#product">Project</a>
+          <a href="index.html#feedback">Review</a>
+          <a  href="https://calendar.app.google/bhjgtmqwfb8A911H8" 
+          target="_blank">Contact</a>
+        </div>
+        </div>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<section class="animate__animated animate__fadeIn animate__slow">
+<div class="container mt-5">
+    <div class="breadcrumb">
+      <a href="index.html" class="breadcrumb__link has-hover-underline">
+       <div>home</div>
+      </a>
+      <div class="breadcrumb__separator">/</div>
+      <div class="breadcrumb__current">All Projects</div>
+    </div>
+    <div class="h1 bold">All Projects</div>
+</div>
+<!-- Tabs-->
+<div class="container">
+  <div class="tab mt-4">
+    <button class="filter tablinks active" onclick="openCity(event, 'All Projects')">All</button>
+    <button class="filter tablinks" onclick="openCity(event, 'Branding')">Branding</button>
+    <button class="filter tablinks" onclick="openCity(event, 'Illustration')">Illustration</button>
+    <button class="filter tablinks" onclick="openCity(event, 'Commercial')">Commercial</button>
+  </div>
+  <div class="tab-content">
+       <!-- All Projects Tab -->
+      <div class="tabcontent mt-3" id="All Projects">
+          <div class="grid">
+
+            <div>
+              <div class="grid-item"><img src="img_source/Divine.JPG" alt="Project 1"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">Divine Furniture Store Catalogue</h2>
+                <p class="body-text py-1">A clean, modern design for Divine's 
+                  catalog that highlights their commitment to quality and elegance.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid-item"><img src="img_source/Pressia.png" alt="Project 2"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">The Myth of Pressia</h2>
+                <p class="body-text py-1">Be part of Pressia – an exhibition where
+                 tension into beauty and exploring the boundaries of artistic expression.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid-item"><img src="img_source/GIF.gif" alt="Project 3"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">Florence Brand Designing</h2>
+                <p class="body-text py-1">"Florence Bar's 
+                   the perfect blend ofelegance with modern
+                    indulgence to captivate a sophisticated audience.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid-item"><img src="img_source/Reminiscence of an Jungle-01.jpg" alt="Project 4"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">Reminiscence of an Jungle</h2>
+                <p class="body-text py-1">Captures the serene beauty and mystique 
+                  of untouched tropical nature, evoking a sense of nostalgia.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid-item"><img src="img_source/3d107.jpg" alt="Project 4"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">Mam Xanh</h2>
+                <p class="body-text py-1">Captures the serene beauty and mystique 
+                  of untouched tropical nature, evoking a sense of nostalgia.</p>
+              </div>
+            </div>
+          
+            <div>
+              <div class="grid-item"><img src="img_source/sơn nghi thủy đăng.gif" alt="Project 4"></div>
+              <div class="grid-content mt-3">
+                <h2 class="h4">Teacher's Day Delight</h2>
+                <p class="body-text py-1">An adorable Teacher's Day illustration 
+                  celebrating educators with a touch of Vietnamese tradition.</p>
+              </div>
+            </div>     
+
+          </div>
+      </div>
+  
+
+      <!-- Branding Tab -->
+      <div class="tabcontent mt-3" id="Branding">
+        <div class="grid">
+          <div>
+            <div class="grid-item"><img src="img_source/GIF.gif" alt="Project 3"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">Florence Brand Designing</h2>
+              <p class="body-text py-1">"Florence Bar's 
+                 the perfect blend ofelegance with modern
+                  indulgence to captivate a sophisticated audience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Illustration Tab -->
+      <div class="tabcontent mt-3" id="Illustration">
+        <div class="grid">
+
+          <div>
+            <div class="grid-item"><img src="img_source/Reminiscence of an Jungle-01.jpg" alt="Project 4"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">Reminiscence of an Jungle</h2>
+              <p class="body-text py-1">Captures the serene beauty and mystique 
+                of untouched tropical nature, evoking a sense of nostalgia.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="grid-item"><img src="img_source/sơn nghi thủy đăng.gif" alt="Project 4"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">Teacher's Day Delight</h2>
+              <p class="body-text py-1">An adorable Teacher's Day illustration 
+                celebrating educators with a touch of Vietnamese tradition.</p>
+            </div>
+          </div>     
+
+        </div>
+      </div>
+      <!-- Commercial Tab -->
+      <div class="tabcontent mt-3" id="Commercial">
+        <div class="grid">
+         
+          <div>
+            <div class="grid-item"><img src="img_source/Divine.JPG" alt="Project 1"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">Divine Furniture Store Catalogue</h2>
+              <p class="body-text py-1">A clean, modern design for Divine's 
+                catalog that highlights their commitment to quality and elegance.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="grid-item"><img src="img_source/Pressia.png" alt="Project 2"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">The Myth of Pressia</h2>
+              <p class="body-text py-1">Be part of Pressia – an exhibition where
+               tension into beauty and exploring the boundaries of artistic expression.</p>
+            </div>
+          </div>
+          <div>
+            <div class="grid-item"><img src="img_source/3d107.jpg" alt="Project 4"></div>
+            <div class="grid-content mt-3">
+              <h2 class="h4">Mam Xanh</h2>
+              <p class="body-text py-1">Captures the serene beauty and mystique 
+                of untouched tropical nature, evoking a sense of nostalgia.</p>
+            </div>
+          </div>
+        </div> 
+    </div>
+</section>
+    
+<script>
+
+function openCity(evt, cityName) {
+  // An tat ca cac noi dung tab
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Xoa lop "active" khoi tat ca cac nut
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Hien thi tab hien tai
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+
+  // Thay doi tieu de chinh (heading)
+  var heading = document.querySelector(".h1.bold");
+  if (heading) {
+    heading.textContent = cityName;
+  }
+
+  // Thay doi noi dung breadcrumb
+  var breadcrumbCurrent = document.querySelector(".breadcrumb__current");
+  if (breadcrumbCurrent) {
+    breadcrumbCurrent.textContent = cityName;
+  }
+}
+
+// Dam bao "All" tab duoc hien thi mac dinh
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".tablinks.active").click();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Tim tab "Branding" va click vao no khi trang vua duoc load
+  var brandingTab = document.querySelector("button[onclick=\"openCity(event, 'Branding')\"]");
+  if (brandingTab) {
+    brandingTab.click();
+  }
+});
+
+
+</script>
+<script>
+    const numTrails = 10;
+    const trails = [];
+    const trail = document.createElement('div');
+    trail.classList.add('trail');
+  
+    document.body.appendChild(trail);
+  
+    let mouseX = 0;
+    let mouseY = 0;
+  
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX + window.scrollX; // Cộng với cuộn trang ngang
+        mouseY = e.clientY + window.scrollY;
+    });
+  
+    function animateTrails() {
+        trail.style.top = `${(mouseY - trail.offsetWidth / 2)}px`;
+        trail.style.left = `${(mouseX - trail.offsetHeight / 2)}px`;
+        requestAnimationFrame(animateTrails);
+    }
+    setInterval(animateTrails, 100);
+  </script>
+</body>
+</html>

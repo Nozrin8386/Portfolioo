@@ -1,0 +1,96 @@
+body, html {
+  height: auto;
+  overflow: auto;
+}
+.breadcrumb{grid-column-gap: .25rem;
+    grid-row-gap: .25rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    line-height: 1;
+    display: flex;
+    color: #555;}
+  .breadcrumb-link{color: #555;}
+  .breadcrumb-link :hover {color:#555;}
+.breadcrumb__current{ text-transform: lowercase;}
+
+.tab {
+    overflow: hidden;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    float: left;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: transparent;
+    height: 30px;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-right: 0.3rem;
+    padding: 14px 16px;
+    transition: 0.3s;
+    
+  }
+  
+  
+  
+  /* Change background color of buttons on hover */
+  .filter:hover {
+    color: rgb(136, 136, 136) ;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    border-color: black;
+    color: #000000;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
+
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+    gap: 20px; /* Add spacing between items */
+    padding: 20px 5px; /* Add padding around the grid */
+  }
+  
+  .grid-item {
+    text-align: center; /* Center align text under images */
+    position: relative; /* Needed for proper child positioning */
+    overflow: hidden; /* Ensures the image doesn't overflow outside the container */
+    border-radius: 10px; /* Optional: Rounded corners */
+    width: 100%; /* Set the width of the container */
+    aspect-ratio: 1/1;
+  }
+  
+  .grid-item img {
+    width: 100%; /* Make images responsive */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease;
+  }
+  .grid-item img:hover {
+    transform: rotate(-3deg) scale(1.2); /* Add hover effect */
+  }
+  
+  .grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  .grid-content{width: 90%;}
+  @media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 equal columns */
+    }}

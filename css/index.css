@@ -1,0 +1,452 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+*{scroll-behavior: smooth;}
+  body{cursor: none;}
+  img{ border-radius: 12px; }
+  .trail {
+    position: absolute;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    mix-blend-mode: difference;
+}
+body{background-color: #f6f7f8 ;overflow: hidden; /* Ẩn cuộn khi hoạt ảnh */}
+
+.iconbtn{
+  margin-left:-5px ;
+  width: 3rem;
+  border-radius: 50%;
+  height: 3rem;
+  background-color: #f9f9f9;
+  color: #000000;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;cursor: none;transition: background-color 0.3s ease;}
+.iconbtn:hover {background-color: #000000; color: #ffffff;border-color: #000000;}
+.iconbtn:disabled { background-color: f9f9f9;
+  color: #bdbdbd;
+  border-color: #bdbdbd;
+cursor: not-allowed;}
+
+/* Loading effect */
+#loading-effect {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: red;
+z-index: 9999; /* Đảm bảo nó ở trên cùng */
+animation: slideUp 0.8s ease-in-out forwards;
+}
+
+/* Hoạt ảnh trượt lên */
+@keyframes slideUp {
+from {
+    transform: translateY(0);
+}
+to {
+    transform: translateY(-100%);
+}
+}
+
+/* Nội dung trang chính */
+main{
+display: none; /* Ẩn nội dung ban đầu */
+}
+
+/* Hiển thị nội dung sau hoạt ảnh */
+body.loaded main {
+display: block;
+}
+
+body.loaded {
+overflow: auto; /* Bật cuộn lại */
+} 
+
+.row{ 
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: stretch; 
+  }
+  .row-block{ 
+    display: block; 
+    flex-wrap: wrap
+  }
+  .col-1{ width: 8.33%}
+  .col-2{ width: 16.66%}
+  .col-3{ width: 25%}/*chia 4*/
+  .col-4{ width: 33.33%}/*chia 3*/
+  .col-5{ width: 41.66%}
+  .col-6{ width: 50%}
+  .col-7{width: 58.33%}
+  .col-8{width:66.66%}
+  .col-9{ width: 75%}
+  .col-10{width: 83.33%}
+  .col-11{ width: 91.66%}
+  .col-12{ width: 100%}
+  [class*="col-"]
+  {
+    padding: 15px;
+    /*border: 1px solid red*/
+  }
+  .container {width: 95%;margin: auto;}
+  .bg-primary {
+    background-color: #f6f7f8;
+  }
+
+  /*--- thu vien grid cho thiet bi tablet ipad--- medium (md)*/
+  @media (min-width:650px)
+  {	
+    .container { width: 90%; margin: auto}
+    .col-md-1{ width: 8.33%}
+    .col-md-2{ width: 16.66%}
+    .col-md-3{ width: 25%}/*chia 4*/
+    .col-md-4{ width: 33.33%}/*chia 3*/
+    .col-md-5{ width: 41.66%}
+    .col-md-6{ width: 50%}
+    .col-md-7{width: 58.33%}
+    .col-md-8{width:66.66%}
+    .col-md-9{ width: 75%}
+    .col-md-10{width: 83.33%}
+    .col-md-11{ width: 91.66%}
+    .col-md-12{ width: 100%}
+    
+  }
+  /*-- gird cho may pc co do rong tu 1000px tro len (lg)*/
+  @media (min-width:1000px)
+  {	
+    .container { width: 90%; margin: auto}
+    .col-lg-1{ width: 8.33%}
+    .col-lg-2{ width: 16.66%}
+    .col-lg-3{ width: 25%}/*chia 4*/
+    .col-lg-4{ width: 33.33%}/*chia 3*/
+    .col-lg-5{ width: 41.66%}
+    .col-lg-6{ width: 50%}
+    .col-lg-7{width: 58.33%}
+    .col-lg-8{width:66.66%}
+    .col-lg-9{ width: 75%}
+    .col-lg-10{width: 83.33%}
+    .col-lg-11{ width: 91.66%}
+    .col-lg-12{ width: 100%}
+  }
+  
+  .img-100{ width: 100%; height: auto}
+  .img-70{width:70%; height: 70%}
+  .img-50{width:50%; height: 50%}
+  .text-center{ text-align: center}
+  .text-left{ text-align: left}
+  .text-right{ text-align: right}
+  .my-50{ margin-top: 50px; margin-bottom: 50px}
+  .py-50{ padding-top: 50px; padding-bottom: 50px}
+  .padding-right{padding-right:30px;}
+
+  
+  .center{justify-content: center; 
+    align-items: center;}
+  .bottom
+  .lowopa{opacity: 0.3;}
+
+
+  /* Tạo hiệu ứng gạch dưới khi hover */
+.has-hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.has-hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor; /* Sử dụng màu chữ hiện tại */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.65s ease;
+}
+
+.has-hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Hero Section */
+.small-img{height: 10vw;width: auto;border-radius: 50%;}
+@media (min-width: 600px){.small-img{height: 8vw;}}
+.Hero-quote{
+  font-family:"urbanist", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 9vw;
+  line-height:90%;
+  justify-content: space-between;}
+
+.Hero-quote-space{padding: 13vh 0;}
+  @media (max-width: 400px)
+{ .Hero-quote-space{padding: 16vh 0;}}
+
+/* Header Styling */
+.header {
+  position: sticky; 
+  top: 0;           
+  z-index: 1000; 
+  height: 85px; 
+  background: linear-gradient(to bottom, rgba(246, 247, 248, 1), rgba(246, 247, 248, 0));}
+
+  .logo {
+    font-size: 2vw;
+    font-weight: bold;}
+
+  .navbar {display: flex;}
+    
+  .navbar a {
+      text-decoration: none;
+      color: #000;}
+    
+  .navbar a:hover {
+      color: #ff0000;}
+
+      .Project {position: relative;}
+      
+      .Project-content {
+        display: none;
+        position: absolute;
+        background-color: #ff0000;
+        border-radius: 8px;
+        padding: 0.5rem 2rem 0.5rem 1rem;
+      }
+      
+      .Project-content a {
+        color: #ffffff;
+        padding: 0.5rem 0px;
+        text-decoration: none;
+        display: block;}
+      .Projectbtn{padding: 10px 16px; gap: 6px;}
+    .Project-content a:hover {color: #000000;}
+    .Project:hover .Project-content {display: block;}
+    .Project:hover .Projectbtn {color: #ff0000;}
+
+  .contactbtn{
+    width: 150px;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .contactbtn:hover {background-color: #ff0000;}
+  @media (max-width:1000px){ .contactbtn{
+      width: 120px;
+      border-radius: 20px;
+      height: 40px;
+      background-color: #000;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .header { height: 70px; }}
+  .dropdown {display: none;}
+  /*-- Mobile Menu (Dropdown) */
+  @media (max-width: 650px) {
+    .header-content{display: none;}
+    .dropdown {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;}
+    .dropbtn{
+      width: 1rem;
+      height: 1rem;
+      margin: 10px 10px;
+    }
+    .dropdown-content{
+      display: none;
+      position:absolute;
+      right: 5px;
+      min-width: 100px;
+      background-color: #ff0000;
+      border-radius: 8px;
+      padding-left: 15px;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      z-index: -10;}
+
+    .dropbtn {display: block;}
+    .myDropdown:hover  .dropdown-content{display: block;}
+    .myDropdown:hover  .dropbtn{color: #ff0000;}
+    .dropdown-content a {
+      font-size: 14px;
+      color: #ffffff;
+      padding: 0.5rem 0px;
+      text-decoration: none;
+      display: block;}
+    .header-sl { height: 60px; }}
+    .dropdown-content a:hover {color: #000000;}
+
+
+  /* About Section */
+.specialize{border-left: 1px solid; border-color: #bdbdbd;}
+.banner{height: 40vh;width: 100%; overflow: hidden;}
+.banner img{height: 100%;width: 100%; object-fit: cover; object-position: center; }
+  
+
+/* Project Section */
+   /* Left Side */
+  .project-hover {
+    position: relative;
+    color: #000; 
+    transition: color 0.5s ease-in-out; text-decoration: none;line-height: 110%;}
+
+  .project-hover:hover {
+    color: #808080;}
+  
+  .project-number {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;}
+
+  .project-hover:hover .project-number {
+    opacity: 1;
+    transform: translateY(0); }
+        
+  /* Right Side */
+  .project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.projectcontent {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 15px 15px;
+    transition: color 0.5s ease-in-out;}
+.table-linked:hover{
+    background-color: #000;}
+.table-linked:hover .projectcontent { color: #ffffff;}
+
+.table{grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  border-bottom: 1px solid #bdbdbd;}
+
+
+  /* Feedback */
+.feedback-slider-container {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    justify-content: center; }
+
+.card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto; 
+}
+  /* Footer */
+  .Thanks{
+  height: 80vh;
+  width: auto;
+  position:relative;
+  display: flex;
+  text-align: center; 
+  align-items: center;  
+  justify-content: center;
+  }
+
+  .Getintouchbtn{
+    width: 150px;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+  }
+    @media (max-width:1000px){ .Getintouchbtn-md{
+      width: 120px;
+      border-radius: 20px;
+      height: 40px;
+      background-color: #000;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      text-decoration: none;
+    }}
+    .Getintouchbtn:hover {background-color: #ff0000;}
+
+  
+  .footer {
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+
+  .selected-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+
+ 
+
+.card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
